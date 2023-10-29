@@ -43,8 +43,16 @@ function getFizzBuzz(/* num */) {
  *   5  => 120
  *   10 => 3628800
  */
-function getFactorial(/* n */) {
-  throw new Error('Not implemented');
+function getFactorial(n) {
+  const result = n;
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  // while (n > 1) {
+  //   n - 1;
+  //   result *= n;
+  // }
+  return result;
 }
 
 
@@ -225,8 +233,8 @@ function reverseString(/* str */) {
  *   87354 => 45378
  *   34143 => 34143
  */
-function reverseInteger(/* num */) {
-  throw new Error('Not implemented');
+function reverseInteger(num) {
+  return num.toString().split('').reverse().join('');
 }
 
 
@@ -268,8 +276,13 @@ function isCreditCardNumber(/* ccn */) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(/* num */) {
-  throw new Error('Not implemented');
+function getDigitalRoot(num) {
+  const array = num.toString().split('');
+  const sum = array.reduce((a, b) => Number(a) + Number(b));
+  if (sum > 9) {
+    return sum.toString().split('').reduce((a, b) => Number(a) + Number(b));
+  }
+  return sum;
 }
 
 
