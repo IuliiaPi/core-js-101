@@ -53,7 +53,7 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (Math.round((value1 + value2) / 2)).toFixed(1);
+  return parseFloat((parseFloat(value1) + parseFloat(value2)) / 2).toFixed();
 }
 
 /**
